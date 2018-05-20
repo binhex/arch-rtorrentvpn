@@ -1,0 +1,37 @@
+version: '3'
+services:    
+  rflood:
+    image: binhex/arch-rtorrentvpn
+    container_name: rflood
+    hostname: rflood
+    ports:
+      - "9080:9080"
+      - "9443:9443"
+      - "8118:8118"
+      - "3000:3000"
+      - "9091:9091"
+      - "8888:8888"
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    environment:
+      - VPN_ENABLED
+      - VPN_USER
+      - VPN_PASS
+      - VPN_PROV
+      - STRICT_PORT_FORWARD
+      - ENABLE_PRIVOXY
+      - ENABLE_FLOOD
+      - ENABLE_AUTODL_IRSSI
+      - LAN_NETWORK
+      - NAME_SERVERS
+      - DEBUG
+      - PHP_TZ
+      - PGID
+      - PUID
+    volumes:
+      - ${CONFIG}/rflood:/config
+      - ${DOWNLOAD}/rflood:/data
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
