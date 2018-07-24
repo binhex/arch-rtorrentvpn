@@ -31,8 +31,9 @@ if [[ "${ENABLE_FLOOD}" == "yes" || "${ENABLE_FLOOD}" == "both" ]]; then
 	echo "[info] Starting Flood..."
 
 	# run tmux attached to flood (non daemonized, blocking)
-	cd "${flood_install_path}" && /usr/bin/script /home/nobody/typescript --command "/usr/bin/tmux new-session -s flood -n flood npm run start:production" &>/dev/null
-
+	# cd "${flood_install_path}" && /usr/bin/script /home/nobody/typescript --command "/usr/bin/tmux new-session -s flood -n flood npm run start:production" &>/dev/null
+	# run flood with forever
+	cd "${flood_install_path}" && "forever start -c 'npm start' ."
 else
 
 	echo "[info] Flood not enabled, skipping starting Flood Web UI"

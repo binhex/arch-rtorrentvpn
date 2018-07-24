@@ -40,6 +40,7 @@ source /root/aur.sh
 
 # install flood
 cd /etc/webapps/flood && npm install --production
+npm i -g forever 
 
 # download autodl-irssi community plugin
 /root/github.sh -df "github-download.zip" -dp "/tmp" -ep "/tmp/extracted" -ip "/usr/share/webapps/rutorrent/plugins/autodl-irssi" -go "autodl-community" -gr "autodl-rutorrent" -rt "source"
