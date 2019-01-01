@@ -3,10 +3,10 @@
 # uncomment the options you wish to enable.
 
 # gets the full path of data of a torrent (it's a workaround for the possibly empty 'd.base_path' attribute)
-method.insert = d.data_path, simple, "if=(d.is_multi_file), (cat,(d.directory),/), (cat,(d.directory),/,(d.$
+method.insert = d.data_path, simple, "if=(d.is_multi_file), (cat,(d.directory),/), (cat,(d.directory),/,(d.name))"
 
 # Extract when finsihed
-# method.set_key=event.download.finished,filebot,"execute.throw.bg={/home/nobody/unrarall.sh,$d.base_path=,$d.n$
+method.set_key=event.download.finished,filebot,"execute.throw.bg={/data/media/rtunrar.sh,$d.base_path=,$d.name=}"
 
 # Maximum number of simultaneous downloads and uploads slots (global slots!) (`max_downloads_global`, `max_uploads_global`)
 #
