@@ -14,7 +14,7 @@ pacman -Syyu --noconfirm
 ####
 
 # define pacman packages
-pacman_packages="git nginx php-fpm rsync openssl tmux gnu-netcat mediainfo npm nodejs php-geoip ipcalc unrar libx264 libvpx libtorrent rtorrent"
+pacman_packages="cksfv git nginx php-fpm rsync openssl tmux gnu-netcat mediainfo npm nodejs php-geoip ipcalc unrar libx264 libvpx libtorrent rtorrent"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
