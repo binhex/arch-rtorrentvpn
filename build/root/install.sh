@@ -56,6 +56,7 @@ cd /etc/webapps/flood && npm install --production
 
 # download unrarall to be able to auto extract downloaded files
 /root/curly.sh -rc 6 -rw 10 -of /home/nobody/unrarall.sh -url "https://raw.githubusercontent.com/arfoll/unrarall/master/unrarall"
+chmod +x /home/nobody/unrarall.sh
 
 # extract compiled version of htpasswd
 tar -xvf /tmp/htpasswd.tar.gz -C /
