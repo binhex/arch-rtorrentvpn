@@ -54,6 +54,9 @@ cd /etc/webapps/flood && npm install --production
 # download htpasswd (problems with apache-tools and openssl 1.1.x)
 /root/curly.sh -rc 6 -rw 10 -of /tmp/htpasswd.tar.gz -url "https://github.com/binhex/arch-packages/raw/master/compiled/htpasswd.tar.gz"
 
+# download unrarall to be able to auto extract downloaded files
+/root/curly.sh -rc 6 -rw 10 -of /home/nobody/unrarall.sh -url "https://raw.githubusercontent.com/arfoll/unrarall/master/unrarall"
+
 # extract compiled version of htpasswd
 tar -xvf /tmp/htpasswd.tar.gz -C /
 
