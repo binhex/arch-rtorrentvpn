@@ -25,7 +25,7 @@ source /root/upd.sh
 pacman -S nodejs-lts-dubnium --needed --noconfirm
 
 # define pacman packages
-pacman_packages="git nginx php-fpm rsync openssl tmux mediainfo npm php-geoip unrar unzip libx264 libvpx libtorrent rtorrent"
+pacman_packages="git nginx php-fpm rsync openssl tmux mediainfo npm php-geoip unrar zip unzip libx264 libvpx libtorrent rtorrent"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
