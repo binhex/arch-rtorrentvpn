@@ -36,7 +36,7 @@ echo 'set -g default-terminal "screen-256color"' > /home/nobody/.tmux.conf
 pacman -S nodejs-lts-dubnium --needed --noconfirm
 
 # define pacman packages
-pacman_packages="git nginx php-fpm rsync openssl tmux mediainfo npm php-geoip unrar unzip libx264 libvpx xmlrpc-c"
+pacman_packages="git nginx php-fpm rsync openssl tmux mediainfo npm php-geoip unrar unzip zip libx264 libvpx xmlrpc-c"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
