@@ -105,13 +105,14 @@ git clone "https://github.com/pyroscope/pyrocore.git" "/opt/pyrocore" && cd "/op
 mkdir -p "/home/nobody/bin"
 
 # run install script which updates to github head and then installs python modules using pip
+cp /tmp/update-to-head.sh ./
 ./update-to-head.sh "/usr/bin/python2"
 
 # install additional python modules using pip (pip laid on disk as part of pyrocore) - required
 # for pycore torque utility
 # note we also require gcc to compile python module psutil
 pacman -S --needed gcc --noconfirm
-/opt/pyrocore/bin/pip install --ignore-installed -r "/opt/pyrocore/requirements-torque.txt"
+/opt/pyrocore/bin/pip install --root --ignore-installed -r "/opt/pyrocore/requirements-torque.txt"
 
 # github master branch - autodl-irssi
 ####
