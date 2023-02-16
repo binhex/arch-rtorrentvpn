@@ -10,7 +10,7 @@ ADD build/*.conf /etc/supervisor/conf.d/
 
 # add bash scripts to install app
 ADD build/root/*.sh /root/
-
+ADD build/root/update-to-head.sh /tmp/
 # get release tag name from build arg
 ARG release_tag_name
 
